@@ -55,7 +55,7 @@ class SmallLayers:
             elif method is 'gated_add':
                 gate = tf.get_variable("gate", shape=latent.get_shape()[1:], initializer=tf.constant_initializer(0.1))
                 tf.summary.histogram(name + "_noise_gate", gate)
-                return latent + tf.mul(gate, ladder)
+                return latent + tf.multiply(gate, ladder)
 
     def generative0(self, latent1, ladder0=None, reuse=False):
         with tf.variable_scope("generative0") as gs:
