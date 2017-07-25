@@ -8,8 +8,8 @@
 import argparse
 
 parser = argparse.ArgumentParser()
-parser.add_argument('--gpus', type=str, default='')
-parser.add_argument('--dataset', type=str, default='celebA')
+parser.add_argument('--gpus', type=str, default='0,1,2')
+parser.add_argument('--dataset', type=str, default='mnist')
 parser.add_argument('--netname', type=str, default='')
 parser.add_argument('--batch_size', type=int, default=100)
 parser.add_argument('--db_path', type=str, default='')
